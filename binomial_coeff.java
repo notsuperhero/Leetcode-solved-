@@ -1,3 +1,5 @@
+import java.util.Scanner;
+import java.util.*;
 public class binomial_coeff{
         public static int factorial(int n){
             int f = 1;
@@ -11,12 +13,15 @@ public class binomial_coeff{
             int fact_n = factorial(n);
             int fact_r = factorial(r);
             int cmr = factorial(n-r);
-
             int bincoeff = fact_n/(fact_r*cmr);
             return bincoeff;
         }
+        
         public static void main(String[]args){
-            System.out.println(bincoeff(5,2));
+            Scanner sc = new Scanner(System.in);
+            int n = sc.nextInt();
+            int r = sc.nextInt();
+            System.out.println(bincoeff(n,r));
         }
     }
 
